@@ -1,0 +1,22 @@
+# Docker Compose project for NGINX reverse proxy
+
+# This project defines the same Docker containers as the Vagrantfile.
+# It's an alternative for developers (particularly on Linux) who prefer docker-compose over Vagrant.
+
+backend:
+  image: tutum/hello-world
+  environment:
+    - NAME=Universe
+  ports:
+    - "8000:80"
+
+rproxy:
+  build: .
+  volumes:
+    - logs/nginx:/var/log/nginx
+  links:
+    - backend:backend
+  ports:
+    - "80:80"
+    - "443:443"
+ 
