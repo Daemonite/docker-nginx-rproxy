@@ -4,7 +4,7 @@ MAINTAINER Dennis Clark <boomfish@gmail.com>
 
 # NGINX config
 
-COPY nginx/conf.d/ /etc/nginx/conf.d/
+COPY config/nginx/conf.d/ /etc/nginx/conf.d/
 
 # Dummy self-signed SSL certificate for local development
 
