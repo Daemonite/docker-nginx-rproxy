@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 Vagrant.require_version ">= 1.7.4"
 
-VAGRANT_IP = ENV['BOSRPROXY_VAGRANT_IP'] || "192.168.33.8"
+VAGRANT_IP = ENV['RPROXY_VAGRANT_IP'] || "192.168.33.8"
 
 # Assume Vagrant machines in this Vagrantfile use the docker provider (true for everything except dockerhost)
 ENV['DEFAULT_VAGRANT_PROVIDER'] = 'docker'
